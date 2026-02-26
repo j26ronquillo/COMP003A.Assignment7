@@ -40,5 +40,23 @@ namespace COMP003A.Assignment7
 			}
              catch (FormatException) { Console.WriteLine("Invalid input. Please enter a number."); }
         }
+        static void DisplayScores(List<int> scores)
+        {
+            Console.WriteLine("\nScores");
+            foreach (int score in scores)
+            {
+                Console.WriteLine(score);
+            }
+        }
+        static void DisplayTotal(List<int> scores)
+        {
+            int total = 0;
+            for (int i = 0; i < scores.Count; i++)
+            {
+                total += scores[i];
+            }
+            Console.WriteLine($"Total: " + total);
+        }
+        
     }
 }
