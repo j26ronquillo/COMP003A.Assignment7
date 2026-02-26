@@ -5,28 +5,29 @@ using System.Xml.Serialization;
 namespace COMP003A.Assignment7
 {
     internal class Program
-    { // Student Score Analyzer 
+    { // Student Score Analyzer. This program is a collection fo student scores and allows the user to display scores
+      // and calculate them when needed.
 		static void Main(string[] args)
 		{
-           List<int> scores = new List<int>();
+           List<int> scores = new List<int>(); //This is the list storing student scores.
            scores.Add(92);
            scores.Add(74);
 		   scores.Add(83);
 		   scores.Add(79);
 		   scores.Add(99);
 
-            Console.WriteLine("1. Display Student Score");
+            Console.WriteLine("1. Display Student Score"); // This is the menu that introduces the user to the options.
             Console.WriteLine("2. Show Total");
             Console.WriteLine("3. Show Class Average");
 			Console.WriteLine("4. Exit Program");
 
 			bool program = true;
-            while (program)
+            while (program) 
             {
                 Console.Write("\nEnter Valid Choice: ");
             
             
-                try
+                try //The try-catch block prevents crash if user puts ina  non-numeric input.
                 {
                     int choice = int.Parse(Console.ReadLine());
 
@@ -67,7 +68,7 @@ namespace COMP003A.Assignment7
             for (int i = 0; i < scores.Count; i++) { total += scores[i]; }
 
             double average = (double)total / scores.Count;
-            Console.WriteLine($"\nAverage: {average}\n");
+            Console.WriteLine($"\nAverage: {average}");
         }
     }
 }
