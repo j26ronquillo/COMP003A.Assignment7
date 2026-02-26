@@ -1,7 +1,9 @@
 ﻿namespace COMP003A.Assignment7
 {
     internal class Program
-    { // Student Score Analyzer
+    { // Student Score Analyzer 
+        static double CalculatedTotal();{
+        int list<int>
         static void Main(string[] args)
         {
            List<int> list = new List<int>();
@@ -16,7 +18,7 @@
             Console.WriteLine("3. Show Class Average");
             Console.WriteLine("4. Exit Program");
             
-
+             
         }
     }
 }
